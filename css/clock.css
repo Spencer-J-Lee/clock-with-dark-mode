@@ -1,0 +1,159 @@
+/* APP-WIDE */
+
+@font-face {
+  font-family: 'digital-7';
+  src: url('../fonts/digital-7.ttf');
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #ececec;
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: #d2d2d2;
+}
+
+.date-time-container {
+  display: flex;
+}
+
+/* MONTH & DATE */
+
+.month-date-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.month-date-container > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.month-date-container h1 {
+  margin-bottom: 10px;
+}
+
+.month, .date {
+  font-size: 56px;
+}
+
+.month {
+  margin-bottom: 16px;
+}
+
+.date {
+  margin-bottom: -8px;
+}
+
+/* TIME & DAY */
+
+.time-day-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 38px 0 54px;
+}
+
+/* TIME */
+
+.time-container {
+  position: relative;
+  margin-top: -26px;
+}
+
+.time {
+  font-family: 'digital-7', sans-serif;
+}
+
+.time, .time-shadow {
+  font-size: 212px;
+  font-weight: normal;
+}
+
+.time-shadow:before {
+  content: "00:00:00";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'digital-7', sans-serif;
+  z-index: -1;
+}
+
+/* DAY */
+
+.day-container {
+  display: flex;
+}
+
+.day {
+  margin-right: 38px;
+}
+
+.day:last-of-type {
+  margin-right: 0;
+}
+
+/* AM & PM */
+
+.am-pm-container {
+  display: flex;
+}
+
+.am {
+  margin-right: 10px;
+}
+
+/* ACTIVE */
+
+.active {
+  color: #333;
+}
+
+/* DARK MODE */
+
+.dark-mode-toggle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  background-color: #131313;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.2);
+}
+
+.dark-mode {
+  background-color: #131313;
+  color: #2D2D2D;
+}
+
+.dark-mode.active {
+  background-color: transparent;
+  color: #CCCCCC;
+}
+
+.dark-mode-toggle.light {
+  background-color: #ececec;
+}
+
+body {
+  transition-property: background-color, color;
+}
+
+.active {
+  transition-property: color;
+}
+
+body, .active {
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
